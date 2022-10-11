@@ -1,2 +1,0 @@
-# Export the mito_config object
-from src.mitosheet_helper_config.mito_config import MITO_ENTERPRISE_CONFIGURATION
