@@ -27,8 +27,7 @@ If you're using Docker to deploy mitosheet to your users, follow these instructi
 
 ### Repository clone
 If your users clone a repository to create their Jupyter / Mito environment, follow these instructions:
-# TODO
-
+[TODO] add these instructions 
 
 # For development 
 This package is only uploaded to pypi and testpypi as a placeholder. 
@@ -40,10 +39,13 @@ This package is only uploaded to pypi and testpypi as a placeholder.
 
 
 ###  Release to Test PyPi
+- python3 -m venv venv;
+- source venv/bin/activate;
 - Delete the dist folder, and the .egg-info folder
 - Bump the version in setup.cfg and pyproject.toml
-- Run `python3 -m build`
-- Run `python3 -m twine upload --repository testpypi dist/*`
+- pip install build twine
+- python3 -m build
+- python3 -m twine upload --repository testpypi dist/*
 
 
 
