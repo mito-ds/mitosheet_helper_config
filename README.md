@@ -33,9 +33,13 @@ If your users clone a repository to create their Jupyter / Mito environment, fol
 This package is only uploaded to pypi and testpypi as a placeholder. 
 
 ### Release to PyPi
+- python3 -m venv venv;
+- source venv/bin/activate;
 - Delete the dist folder, and the .egg-info folder
 - Bump the version in setup.cfg and pyproject.toml
-- Run `python3 -m build`
+- pip install build twine
+- python3 -m build
+- twine upload dist/*
 
 
 ###  Release to Test PyPi
