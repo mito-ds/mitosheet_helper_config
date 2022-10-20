@@ -1,3 +1,4 @@
+from typing import Any, Dict
 from mitosheet_helper_config.mito_config_utils import *
 
 """
@@ -7,7 +8,7 @@ To configure your Mito deployment, follow the instructions above each of the ent
 in the MITO_ENTERPRISE_CONFIGURATION dictionary below.
 """
 
-MITO_ENTERPRISE_CONFIGURATION = {
+MITO_ENTERPRISE_CONFIGURATION: Dict[str, Any] = {
 	# The MEC_VERSION is used internally by Mito to properly read the 
 	# MITO_ENTERPRISE_CONFIGURATION dictionary. Do not edit.
 	MEC_VERSION: 1,
