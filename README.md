@@ -32,7 +32,8 @@ If your users clone a repository to create their Jupyter / Mito environment, fol
 # For development 
 This package is only uploaded to pypi and testpypi as a placeholder. 
 
-### Testing 
+### Development 
+To get started developing the mitosheet_config_helper package, follow these instructions:
 - python3 -m venv venv;
 - source venv/bin/activate;
 - pip install -e ".[dev]"
@@ -42,7 +43,6 @@ This package is only uploaded to pypi and testpypi as a placeholder.
 - source venv/bin/activate;
 - Delete the dist folder, and the .egg-info folder
 - Bump the version in setup.cfg and pyproject.toml
-- pip install build twine
 - python3 -m build
 - twine upload dist/*
 
