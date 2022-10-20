@@ -17,11 +17,14 @@ classifiers = [
     "Operating System :: OS Independent",
 ]
 
+[project.optional-dependencies]
+dev = [
+  'mypy',
+  'twine',
+  'build'
+]
+
 [project.urls]
 "Homepage" = "https://github.com/mito-ds/mitosheet_helper_config"
 "Bug Tracker" = "https://github.com/mito-ds/monorepo/issues"
 
-[project.optional-dependencies]
-dev = [
-  'mypy'
-]
