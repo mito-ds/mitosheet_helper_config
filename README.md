@@ -27,7 +27,7 @@ If you're using Docker to deploy mitosheet to your users, follow these instructi
 
 ### Repository clone
 If your users clone a repository to create their Jupyter / Mito environment, follow these instructions:
-[TODO] add these instructions 
+[TODO: add these instructions]
 
 # For development 
 This package is only uploaded to pypi and testpypi as a placeholder. 
