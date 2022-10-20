@@ -32,6 +32,11 @@ If your users clone a repository to create their Jupyter / Mito environment, fol
 # For development 
 This package is only uploaded to pypi and testpypi as a placeholder. 
 
+### Testing 
+- python3 -m venv venv;
+- source venv/bin/activate;
+- pip install -e ".[dev]"
+
 ### Release to PyPi
 - python3 -m venv venv;
 - source venv/bin/activate;
