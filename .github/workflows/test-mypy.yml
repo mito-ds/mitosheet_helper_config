@@ -2,9 +2,9 @@ name: Test mitosheet-helper-config types
 
 on:
   push:
-    branches: [ dev ]
+    branches: [ dev, main ]
   pull_request:
-    branches: [ dev ]
+    branches: [ dev, main ]
 
 jobs:
   test-mitosheet-mypy:
