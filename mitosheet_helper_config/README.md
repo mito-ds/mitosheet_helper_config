@@ -1,12 +1,12 @@
-This README focusses is written for Mito team members who are developing the `mitosheet_helper_config` package. If you are a admin looking to use the `mitosheet_helper_config` package, check out the README in the home directory of this repo. 
+This README will help you develop or deploy the `mitosheet_helper_config` package.
 
 ## Background 
-The `mitosheet_helper_config` package is developped using setuptools. Notice, that instead of configuring the package using a `setup.py` file like we do in the `mitosheet` package, we instead use a `pyproject.toml` file. 
+The `mitosheet_helper_config` package is developped using setuptools.
 
 ## Development 
 To get started developing the mitosheet_config_helper package:
 
-### On Mac 
+### On Linux / Mac
 Run this command:
 
 ``` 
@@ -16,7 +16,6 @@ bash dev/macsetup.sh
 ### On Windows
 Run these commands:
 ```
-rmdir /s venv
 python3 -m venv venv
 venv\Scripts\activate.bat
 pip install -e ".[dev]"
@@ -69,6 +68,3 @@ To release on PyPi:
 - twine upload dist/*
 To release on TestPyPi:
 - python3 -m twine upload --repository testpypi dist/*
-
-
-
