@@ -30,7 +30,7 @@ This package can be made available through a private PyPi mirror, or directly fr
 
 ### Deploy this package to a private PyPi mirror
 
-If you run a PyPi mirror to distribute packages to your users, you can simply follow the deploy instructions in `mitosheet_herlper_config/README.md`, just changing the PyPi deploy location to the internal PyPi mirror.
+If you run a PyPi mirror to distribute packages to your users, follow the deploy instructions in `DEPLOY.md`.
 
 After doing this, the `mitosheet_herlper_config` can be deployed to user enviornments like any other package. Simply add `mitosheet_herlper_config` to `requirements.txt` file, or install it into a docker image like any other pip package.
 
