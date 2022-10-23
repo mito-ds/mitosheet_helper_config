@@ -15,29 +15,44 @@ The `mitosheet_helper_config` package is designed for admins, like you, to set t
 
 When the `mitosheet_helper_config` package is present in your users' environment, the `mitosheet` package will read the exported MITO_ENTERPRISE_CONFIGURATION dictionary from this package and update the settings accordingly. 
 
-At a high level, to use the `mitosheet_helper_config` settings you will: clone this repo, configure the settings, upload this repo to your org's GitHub, and finally install this package from that GitHub repo during the creation of your user's environment. 
 
+## Instructions
 
-## Instrucitons
-To set the Mito configuration settings for your entire organization, follow these instructions:
-- Clone this repository
-- Navigate to the `mito_config.py` file and follow the instructions to set your enterprise settings
-- Upload the repository to your organization's GitHub
+To set configuration settings, you will need to fork this repo, configure the settings, and finally install your modified package into your user's environment. 
 
-Now that you've set your configuration options, the last step is to make the `mitosheet_helper_config` package accessible to the `mitosheet` pacakge. 
+### Fork this repository
+- Fork this repository
+- Edit the `mito_helper_config/mito_config.py` file to set your enterprise settings
+- Push these changes to your Github fork
 
-### Docker Deployment
-If you're using Docker to deploy mitosheet to your users, follow these instructions:
-- Retrieve the git clone URL of the configured `mitosheet_helper_config` package that you just uploaded to your organization's GitHub. 
-    - It shoud look something like this: `https://github.com/mito-ds/mitosheet_helper_config.git`. 
-- Add this command to your Docker file: `RUN pip install git+<REPO_URL>#egg=mitosheet_helper_config`. 
-    - Make sure to fill in the `<REPO_URL>` with the git clone URL you just collected. 
-    - The final command should look something like this: `RUN pip install git+https://github.com/mito-ds/mitosheet_helper_config.git#egg=mitosheet_helper_config`
-- Rebuild the base Docker image
+### Ensure the modified settings package is available 
 
-### GitHub Repository Clone
-If your users clone a repository to create their Jupyter / Mito environment, follow these instructions:
-[TODO add these instructions]
+We are going to install this modified package using `pip install`, which means we need to make this package visible to `pip`. There are two easy ways to accomplish this, without revealing any private data:
+1. Distribute package directly from your Github fork
+2. Deploy this package to a private PyPi mirror
+
+#### Distribute package directly from your Github fork
+
+In this case, **ensure that the `pip install` will have the correct permissions to access this Github repository when it is being run.** This works well if you deploy enviornemnts to users with docker. 
+
+#### Deploy this package to a private PyPi mirror
+
+If users cannot all be given access to this Git repository, another option is to deploy this package to a private PyPi mirror so users can access it. Follow the instructions in `mitosheet_herlper_config/README.md`, just changing the PyPi deploy location to the internal PyPi mirror.
+
+### Adding this config to user enviornments
+To deploy this config to the user enviornment, you now only need to `pip install` this modified package. 
+1. If you are distributing the package from Github, run the command: `pip install git+<REPO_URL>#egg=mitosheet_helper_config`, where you replace `<REPO_URL>` with the URL of the forked and updated package you created above. **Ensure that the `pip install` will have the correct permissions to access this Github repository when it is being run.**
+2. If you are distributing the package from a PyPi mirror, simply run `pip install mitosheet_helper_config`.
+
+#### requirements.txt file
+
+- Distributing from Github: in `requirements.txt`, add a line `git+<REPO_URL>#egg=mitosheet_helper_config`, where you replace `<REPO_URL>` with the URL of your Github fork.
+- Ditributing from PyPi mirror: in `requirements.txt`, add a line `mitosheet_helper_config`.
+
+#### Docker
+
+- Distributing from Github: `RUN pip install git+<REPO_URL>#egg=mitosheet_helper_config`, where you replace `<REPO_URL>` with the URL of your Github fork.
+- Ditributing from PyPi mirror: `RUN pip install mitosheet_helper_config`
 
 ### Testing
 If you followed those instructions successfully, the settings should now be applied to Mito. Make sure it worked by:
