@@ -6,7 +6,7 @@ Currently, the package allows you to configure the:
 
 In the future, enterprises will have many additional configuration options. If you are an enterprise with a specific configuration request, let us know by [opening an issue](https://github.com/mito-ds/monorepo/issues) in the Mito monorepo or sending us an [email](mailto:founders@sagacollab.com). 
 
-This package should only be used with a valid Mito Enterprise liscence or written consent from Mito. Learn more about Mito Enterprise [here](https://www.trymito.io/plans).
+This package should only be used with a valid Mito Enterprise liscence Mito. Learn more about Mito Enterprise [here](https://www.trymito.io/plans).
 
 # How it works 
 
