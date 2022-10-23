@@ -40,7 +40,7 @@ Another option is just `pip install`ing directly from Github. This works if all 
 
 If you are distributing the package from Github, run the command: `pip install git+<REPO_URL>#egg=mitosheet_helper_config`, where you replace `<REPO_URL>` with the URL of the forked and updated package you created above. **Ensure that the `pip install` will have the correct permissions to access this Github repository when it is being run.**
 
-### Testing
+## 3. Verify deployment worked
 If you followed those instructions successfully, the settings should now be applied to Mito. Make sure it worked by:
 - Open a Jupyter instance where you use Mito
 - Restart your kernel and refresh your browser 
@@ -48,5 +48,5 @@ If you followed those instructions successfully, the settings should now be appl
 - Click on the Get Support button in the top right hand corner of Mito
 - Make sure that Mito directs you to the email address you configured in the `mitosheet_helper_config` package. 
 
-### Want help?
-If you ran into any issues during that process, we're more than happy to help. Send us an [email](mailto:founders@sagacollab.com) and we'll get you sorted.
+# Want help?
+If you ran into any issues during that process, we're more than happy to help. If you have a Mito Enterprise license, you're probably talking to us already, so just shoot us an email, and we'll get you sorted.
