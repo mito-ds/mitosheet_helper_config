@@ -1,6 +1,6 @@
 # Deploy `mitosheet_helper_config` to a PyPi mirror
 
-If you an admin that wants to deploy this package to a private PyPi mirror to distribute to your users, follow these instructions. Run the commands:
+If you are an admin that wants to deploy this package to a private PyPi mirror to distribute to your users, follow these instructions. Run the commands:
 
 ```
 python3 -m venv venv;
@@ -13,7 +13,7 @@ Then, bump the version in in setup.cfg and pyproject.toml, and run:
 python3 -m build
 ```
 
-Finially, release to PyPi with the command:
+Finally, release to PyPi with the command:
 ```
 twine upload dist/ <CUSTOM PYPI FLAGS>
 ```
