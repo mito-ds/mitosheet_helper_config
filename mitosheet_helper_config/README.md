@@ -32,7 +32,14 @@ pip install -e .
 When you make edits to the `mitosheet_helper_config` pacakge, just restart the kernel launched in the `mitosheet` package, and the changes will take effect. 
 
 ## Testing
-There are two types of tests that we want to run while developing this package, mypy tests and integration tests.
+There are thre types of tests that we want to run while developing this package: pytest tests, mypy tests and integration tests.
+
+### Pytest tests
+To run the pytest tests, run the command:
+```
+pytest tests/  mitosheet_helper_config/mito_config.py
+```
+This executes all of the tests in the `tests/` folder, as well as the test in `mito_config.py` which is used to communicate to the admin not to change the version of MITO_ENTERPRISE_CONFIGURATION.
 
 ### MyPY tests
 To run MyPy tests, run this command:

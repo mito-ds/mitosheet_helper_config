@@ -20,3 +20,7 @@ MITO_ENTERPRISE_CONFIGURATION: Dict[str, Any] = {
 	# 	SUPPORT_EMAIL: 'mito_support@company.com',
 	SUPPORT_EMAIL: None, 
 }
+
+
+def test_mec_version_unchanged():
+	assert MITO_ENTERPRISE_CONFIGURATION[MEC_VERSION] == 1

@@ -21,10 +21,10 @@ classifiers = [
 dev = [
   'mypy',
   'twine',
-  'build'
+  'build',
+  'pytest'
 ]
 
 [project.urls]
 "Homepage" = "https://github.com/mito-ds/mitosheet_helper_config"
 "Bug Tracker" = "https://github.com/mito-ds/monorepo/issues"
-
