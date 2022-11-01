@@ -18,7 +18,7 @@ MITO_ENTERPRISE_CONFIGURATION: Dict[str, Any] = {
 	# users will get directed to the Mito community slack. The final result should look like:
 	# 	
 	# 	SUPPORT_EMAIL: 'mito_support@company.com',
-	SUPPORT_EMAIL: None, 
+	SUPPORT_EMAIL: 'aaron@sagacollab.com', 
 }
 
 # Ensure that the MEC_VERSION was not changed.

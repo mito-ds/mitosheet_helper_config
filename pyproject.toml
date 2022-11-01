@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 
 [project]
-name = "mitosheet_helper_config"
+name = "mitosheet_helper_config_2"
 version = "0.0.1"
 authors = [
   { name="Aaron Diamond-Reivich", email="aarondr77@gmail.com" },
